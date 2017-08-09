@@ -81,7 +81,6 @@ Page({
         "state": this.data.statusarr[this.data.statusindex],
         "text": this.data.text,
         "openId": getApp().globalData.openid
-        
       },
       success: function (res) {
         console.log(res.data)
