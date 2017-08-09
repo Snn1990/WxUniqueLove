@@ -1,0 +1,14 @@
+
+<view class="classname">
+  <canvas  style="width: 400px; height: 500px;" 
+           class="graphCanvas" 
+           canvas-id="pieGraph"></canvas>
+  <canvas style="width: 400px; height: 500px;" 
+          canvas-id="lineGraph"></canvas>
+</view>
+
+  
+
+<!-- <canvas class="graphCanvas" canvas-id="ringGraph"></canvas> -->
+
+<!-- <canvas class="graphCanvas" canvas-id="lineGraph"></canvas> -->

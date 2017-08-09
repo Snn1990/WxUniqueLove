@@ -1,0 +1,5 @@
+@import './../logs/logs.wxss';
+
+.service-detail{
+	padding:20rpx;
+}

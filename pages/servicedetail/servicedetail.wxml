@@ -1,0 +1,25 @@
+<view class="container">
+	<view class="container-body">
+		<view class="service-item service-detail">
+			
+			<view class="service-text">
+				<view class="service-tite">标题：{{servicedetail.name}}</view>
+				<view class="service-tags">
+					<text>分类：{{servicedetail.classs}}</text>
+				</view>
+				<text class="service-city">留言状态：{{servicedetail.state}}</text>
+
+
+        <view class="input-item input-item-full">
+					<text class="service-city">详细记录描述：</text>
+					<textarea placeholder="" maxlength="50">{{servicedetail.text}}</textarea>
+				</view>
+
+
+			</view>
+		</view>
+	</view>
+	<view class="container-footer">
+		<button class="btn-orange btn-block">立即修改</button>
+	</view>
+</view>

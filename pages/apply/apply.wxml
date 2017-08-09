@@ -1,0 +1,48 @@
+<view class="container container-gray">
+	<view class="group">
+		<view class="group-header">留言</view>
+		<view class="group-body">
+			<view class="input-list">
+
+				<view class="input-item">
+					<text class="input-item-label">留言名称</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入标题" 
+                               bindinput="inputName"
+                               ></input>
+					</view>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">留言分类</text>
+					<picker class="input-item-content" 
+                  bindchange="bindPickerChange"  
+                  data-pickername="industry" 
+                  value="{{industryindex}}" 
+                  range="{{industryarr}}" 
+                  mode="selector">{{industryarr[industryindex]}}
+					</picker>
+				</view>
+				<view class="input-item">
+					<text class="input-item-label">留言状态</text>
+					<picker class="input-item-content" 
+                  bindchange="bindPickerChange" 
+                  data-pickername="status" 
+                  value="{{statusindex}}" 
+                  range="{{statusarr}}" 
+                  mode="selector">{{statusarr[statusindex]}}
+					</picker>
+				</view>
+				<view class="input-item input-item-full">
+					<text class="input-item-label">详细描述</text>
+					<textarea placeholder="可输入50字" maxlength="50" 
+                    bindinput ="inputText"></textarea>
+				</view>
+				
+			</view>
+		</view>
+	
+	</view>
+	<view class="btn-submit">
+		<button class="btn-block btn-orange" bindtap="applySubmit">提交</button>
+	</view>
+</view>

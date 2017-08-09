@@ -1,0 +1,24 @@
+<view class="container">
+	<view class="my-list">
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_24.png" mode="aspectFit"></image>
+			<text>常用记录</text>
+		</navigator>
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_26.png" mode="aspectFit"></image>
+			<text>个人设置</text>
+		</navigator>
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_28.png" mode="aspectFit"></image>
+			<text>开发者专用</text>
+		</navigator>
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_30.png" mode="aspectFit"></image>
+			<text>问题反馈</text>
+		</navigator>
+		<navigator class="my-item" url="../myconferencelist/myconferencelist">
+			<image src="../../images/icon_32.png" mode="aspectFit"></image>
+			<text>服务申请</text>
+		</navigator>
+	</view>
+</view>

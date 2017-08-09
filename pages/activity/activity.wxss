@@ -1,0 +1,62 @@
+@import '../conference/conference.wxss';
+
+.activity-item-info{
+    justify-content: space-between;
+   
+}
+.activity-item-info text{
+	flex: none;
+   
+}
+.conference-item-info text:before{
+	content: '';
+	display: inline-block;
+	width: 34rpx;
+	height: 34rpx;
+	vertical-align: -2rpx;
+	margin-right: 6rpx;
+ 
+}
+
+.stytext{
+	position: absolute;
+	left: 0;
+	background: #07b5e0;
+	color: #fff;
+	font-size: 32rpx;
+	padding: 6rpx 20rpx;
+  
+}
+
+.conference-item{
+  height: 90px;
+	box-shadow: 0px 10px 5px #888888;
+}
+
+.icon-xinxi{
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 40px;
+line-height: 40px;
+padding-left: 10px;
+  float: left;
+  color: red;
+}
+.conference-item-title{
+font-size: 16px;
+padding-left: 10px;
+}
+.icon-zuobiao{
+text-align: right;
+  font-size: 10px;
+  color: gray;
+  float: right;
+margin-right: 10px;
+}
+.icon-time {
+  text-align: right;
+line-height: 35px;
+font-size: 14px;
+ float: right;
+ margin-right: 10px;
+}

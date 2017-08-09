@@ -1,0 +1,34 @@
+<view class="container">
+  <swiper class="index-banner" indicator-dots="{{true}}"
+    autoplay="{{true}}" interval="{{4000}}" duration="{{1000}}">
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFill" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+	<view class="index-menu">
+		<navigator class="index-menu-item" wx:for="{{indexmenu}}" wx:key="{{item.url}}" url="../{{item.url}}/{{item.url}}">
+			<image src="{{item.icon}}"></image>
+			<text>{{item.text}}</text>
+		</navigator>
+    <!-- <view class="classname">
+      <view class="index-menu-weather">
+      <text>日期:{{weatherdate}}</text>
+      </view>
+      <view class="index-menu-weather">
+        <text>白天天气:{{weatherdayTime}}</text>
+      </view>
+      <view class="index-menu-weather">
+        <text>夜间天气:{{weathernight}}</text>
+      </view>
+      <view class="index-menu-weather">
+        <text>气温范围:{{weathertemperature}}</text>
+      </view>
+      <view class="index-menu-weather">
+        <text>风力:{{weatherwind}}</text>
+      </view>
+    </view> -->
+    
+	</view>
+</view>

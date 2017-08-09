@@ -1,0 +1,29 @@
+<view class="container container-gray">
+	<view class="group">
+		<view class="group-header">申请信息</view>
+		<view class="group-body">
+			<view class="input-list">
+
+				<view class="input-item">
+					<text class="input-item-label">申请人</text>
+					<view class="input-item-content">
+						<input type="text" placeholder="请输入你的姓名" 
+                               bindinput="inputName"
+                               ></input>
+					</view>
+				</view>
+				
+				<view class="input-item input-item-full">
+					<text class="input-item-label">描述</text>
+					<textarea placeholder="请用一句话来打动作者，限50字" maxlength="50" 
+                    bindinput ="inputText"></textarea>
+				</view>
+				
+			</view>
+		</view>
+	
+	</view>
+	<view class="btn-submit">
+		<button class="btn-block btn-orange" bindtap="applySubmit">提交</button>
+	</view>
+</view>

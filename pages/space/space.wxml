@@ -1,0 +1,25 @@
+<view class="container container-gray">
+	<view class="group">
+		<view class="group-header">选择账单种类</view>
+		<view class="group-body">
+			<view class="multiple-select">
+				<view wx:for="{{checitems}}" wx:key="{{item.id}}">
+					<text data-id="{{item.id}}"bindtap="onSelectTag" class="{{selectedid==item.id?'active':''}}">{{item.text}}</text>
+				</view>
+			</view>
+		</view>
+    <view class="group-header">花费金额:(取整元)</view>
+    <view class="group-body">
+			<input type="number"  maxlength="7"
+             bindinput="inputMoney">0</input>
+		</view>
+		<view class="group-header">花费描述</view>
+		<view class="group-body">
+			<textarea placeholder="输入你这笔花费的内容，限制50字" maxlength="50" bindinput="inputText"></textarea>
+		</view>
+	</view>
+	<view class="btn-submit">
+		<button class="btn-block btn-orange" bindtap="clickOk"
+             >记录到账本</button>
+	</view>
+</view>

@@ -1,0 +1,54 @@
+.service-list{
+	padding: 0 20rpx;
+}
+.service-item{
+	display: flex;
+	padding: 20rpx 0; 
+	border-bottom: 1rpx solid #e8e8e8;
+}
+.service-img{
+	width: 220rpx;
+	height: 156rpx;
+}
+.service-item image{
+	width: 220rpx;
+	height: 156rpx;
+}
+.service-text{
+	flex: 1;
+	margin-left: 10rpx;
+	width: 100%;
+  box-shadow: 0px 5px 5px #888888;
+}
+.service-text .service-tite{
+  margin-left: 10rpx;
+	color: #333;
+	width: 100%;
+	font-size: 34rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  font-weight:bold;
+}
+.service-tags{
+	/* margin: 6rpx 0; */
+  margin-left: 10rpx;
+}
+.service-tags text{
+  
+	padding: 6rpx 16rpx;
+	border: 1rpx solid #f7982a;
+	line-height: 1;
+	color: #f7982a;
+	font-size: 28rpx;
+	border-radius: 4rpx;
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
+	white-space: nowrap;
+  
+}
+.service-city{
+	color: #666;
+  font-size: 25rpx;
+  margin-left: 10rpx;
+}
