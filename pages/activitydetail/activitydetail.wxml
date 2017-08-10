@@ -33,8 +33,11 @@
                bindscrolltolower="scrollLoading">
 		<view class="service-list">
 			<navigator class="service-item" wx:for="{{activitylist}}" wx:key="{{item.id}}">
-				
-				<view class="service-text">
+				<view class="service-text" 
+              bindtouchstart="mytouchstart" 
+              bindtouchend="mytouchend" 
+              bindtap="editAddress" 
+              data-descid="{{item.id}}">
 					<view class="service-tite">{{item.name}}</view>
 					<view class="service-tags">
 						<text>金额：{{item.coments}}</text>

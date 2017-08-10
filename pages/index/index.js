@@ -101,11 +101,11 @@ Page({
           'text': '账本',
           'url': 'space'
         },
-        // {
-        //   'icon':'./../../images/icon_03.png',
-        //   'text':'朋友',
-        //   'url':'spacereserve'
-        // },
+        {
+          'icon':'./../../images/icon_03.png',
+          'text':'朋友',
+          'url':'spacereserve'
+        },
         {
           'icon':'./../../images/icon_05.png',
           'text':'败家报表',

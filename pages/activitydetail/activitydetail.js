@@ -13,7 +13,9 @@ Page({
     money: [],
     pageId:0,
     selectType:null,
-    selectData:null
+    selectData:null,
+    touch_start:0,
+    touch_end:0
   },
   onLoad: function (options) { //加载数据渲染页面
     console.log(options.id);
@@ -83,7 +85,7 @@ Page({
         //数据展示
         for (var i = 0; i < res.data.data.numberOfElements; i++) {
           newlist.push({
-            "id": i + 1,
+            "id": res.data.data.content[i].id,
             "name": res.data.data.content[i].style,
             "time": res.data.data.content[i].createTime,
             "coments": res.data.data.content[i].money,
@@ -109,5 +111,62 @@ Page({
     }
 
   },
+
+  //长按删除
+  editAddress: function (event) {
+    let that = this;
+    //触摸时间距离页面打开的毫秒数  
+    var touchTime = that.data.touch_end - that.data.touch_start;
+    console.log(event);
+    console.log(event.currentTarget.dataset.descid);
+    //如果按下时间大于350为长按  
+    if (touchTime > 350) {
+      wx.showModal({
+        title: '提示',
+        content: '是否删除这笔消费？',
+        success: function (res) {
+          if (res.confirm) {
+            console.log("点击了确定");
+            wx.request({
+              url: 'https://liuyaqing0309.com/delbalance',
+              data: {
+                "id": event.currentTarget.dataset.descid
+              },
+              method: "GET",
+              success: function (res) {
+                wx.showToast({
+                  title: '请稍等',
+                  icon: 'loading'
+                })
+                that.setData({
+                  activitylist: [],
+                  pageId: 0,
+                  lastPage: false
+                })
+                that.fetchConferenceData();
+              }
+            })
+          }
+        }
+      })
+    } else {
+    }
+  },
+  //按下事件开始  
+  mytouchstart: function (e) {
+    let that = this;
+    that.setData({
+      touch_start: e.timeStamp
+    })
+    console.log(e.timeStamp + '- touch-start')
+  },
+  //按下事件结束  
+  mytouchend: function (e) {
+    let that = this;
+    that.setData({
+      touch_end: e.timeStamp
+    })
+    console.log(e.timeStamp + '- touch-end')
+  }, 
 
 })
